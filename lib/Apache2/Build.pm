@@ -2261,7 +2261,7 @@ sub strip_lfs {
     return $cflags unless $self->has_large_files_conflict();
 
     my $lf = $Config{ccflags_uselargefiles}
-        || '-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64';
+        || '-D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64';
     $cflags =~ s/$lf//;
     $cflags;
 }
