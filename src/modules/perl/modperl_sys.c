@@ -40,6 +40,7 @@ int modperl_sys_is_dir(pTHX_ SV *sv)
  */
 int modperl_sys_dlclose(void *handle)
 {
+#include <dlfcn.h>
 #if defined(MP_SYS_DL_DLOPEN)
 #ifdef I_DLFCN
 #include <dlfcn.h>
